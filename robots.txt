@@ -1,0 +1,25 @@
+# Robots.txt for Albinism Foundation of Zambia
+# Allow all search engines to index the site
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://albinism-awareness.com/sitemap.xml
+
+# Specific crawl delays (if needed for server performance)
+Crawl-delay: 1
+
+# Block sensitive areas (if they exist in the future)
+# Disallow: /admin/
+# Disallow: /private/
+# Disallow: /temp/
+
+# Allow social media crawlers
+User-agent: facebookexternalhit/*
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
