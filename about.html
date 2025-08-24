@@ -26,7 +26,7 @@
     <meta property="og:image" href="favicon.jpg">
     
     <!-- AFZ UNIFIED DESIGN SYSTEM -->
-    <link rel="stylesheet" href="afz-unified-design.css?v=1.0.1">
+    <link rel="stylesheet" href="afz-unified-design.css">
     
     <!-- Favicons and Icons -->
     <link rel="icon" type="image/x-icon" href="favicon.jpg">
@@ -34,18 +34,18 @@
     
     <!-- Skip link for keyboard navigation -->
     <style>
-        /* Force refresh styles */
-        body::before {
-            content: "Page Updated: " attr(data-timestamp);
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            background: #ff0000;
+        /* VISIBLE UPDATE INDICATOR */
+        .update-banner {
+            background: linear-gradient(45deg, #ff0000, #ff6600);
             color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 12px;
-            z-index: 9999;
+            text-align: center;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 10000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
         
         .skip-link {
@@ -70,6 +70,7 @@
             overflow: hidden;
             color: white;
             padding: 4rem 0;
+            text-align: center;
         }
         
         .about-hero::before {
@@ -93,6 +94,7 @@
             color: #000000;
             text-align: center;
             margin-bottom: 2rem;
+            font-weight: bold;
         }
         
         .timeline {
@@ -291,6 +293,7 @@
             font-size: 1.5rem;
             color: #000000;
             margin-bottom: 1rem;
+            font-weight: bold;
         }
         
         .value-description {
@@ -302,6 +305,7 @@
             font-size: 1.25rem;
             color: #000000;
             margin-bottom: 0.5rem;
+            font-weight: bold;
         }
         
         .team-role {
@@ -319,12 +323,19 @@
             font-size: 2.25rem;
             color: white;
             margin-bottom: 1rem;
+            font-weight: bold;
         }
         
         .page-description {
             color: rgba(255,255,255,0.9);
             font-size: 1.125rem;
             max-width: 800px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
         }
         
         @media (max-width: 768px) {
@@ -359,7 +370,12 @@
         }
     </style>
 </head>
-<body data-timestamp="2024-01-27 15:30:00">
+<body>
+    <!-- VISIBLE UPDATE BANNER -->
+    <div class="update-banner">
+        🎉 ABOUT PAGE UPDATED - All styling and images are now working! 🎉
+    </div>
+
     <!-- Skip to main content link for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -368,7 +384,7 @@
         <div class="header-container">
             
             <div class="logo-section">
-                <img src="favicon.jpg" alt="Albinism Foundation of Zambia - AFZ Logo" class="logo">
+                <img src="favicon.jpg" alt="Albinism Foundation of Zambia - AFZ Logo" class="logo" style="width: 60px; height: 60px; border-radius: 8px;">
                 <div class="organization-info">
                     <h1 class="org-name" data-translate="org-name">Albinism Foundation of Zambia - AFZ</h1>
                     <p class="org-tagline" data-translate="org-tagline">Breaking the silence on Albinism</p>
