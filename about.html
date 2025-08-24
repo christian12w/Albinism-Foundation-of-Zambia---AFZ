@@ -11,21 +11,21 @@
     <meta name="theme-color" content="#2b6cb0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="manifest" href="../manifest.json">
+    <link rel="manifest" href="manifest.json">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="About AFZ - Albinism Foundation of Zambia">
     <meta property="og:description" content="Learn about our mission to advocate for the rights and inclusion of persons with albinism in Zambia">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://albinism-awareness.com/pages/about.html">
-    <meta property="og:image" content="../images/afz-logo-final.png">
+    <meta property="og:image" href="favicon.jpg">
     
     <!-- AFZ UNIFIED DESIGN SYSTEM -->
-    <link rel="stylesheet" href="../css/afz-unified-design.css">
+    <link rel="stylesheet" href="afz-unified-design.css">
     
     <!-- Favicons and Icons -->
-    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.jpg">
+    <link rel="apple-touch-icon" href="favicon.jpg">
     
     <!-- Skip link for keyboard navigation -->
     <style>
@@ -46,7 +46,7 @@
         
         /* About Page Specific Styles */
         .about-hero {
-            background: linear-gradient(135deg, var(--primary-black) 0%, var(--secondary-gray) 50%, var(--primary-gold) 100%);
+            background: linear-gradient(135deg, var(--afz-black) 0%, var(--gray-800) 50%, var(--afz-gold) 100%);
             position: relative;
             overflow: hidden;
         }
@@ -62,6 +62,18 @@
             opacity: 0.3;
         }
         
+        .mission-section {
+            padding: var(--space-16) 0;
+            background: var(--gray-50);
+        }
+        
+        .section-title {
+            font-size: 2.25rem;
+            color: var(--afz-black);
+            text-align: center;
+            margin-bottom: var(--space-8);
+        }
+        
         .timeline {
             position: relative;
             padding: 2rem 0;
@@ -74,7 +86,7 @@
             top: 0;
             bottom: 0;
             width: 4px;
-            background: linear-gradient(to bottom, var(--primary-black), var(--primary-gold));
+            background: linear-gradient(to bottom, var(--afz-black), var(--afz-gold));
             transform: translateX(-50%);
         }
         
@@ -109,7 +121,7 @@
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            background: var(--primary-black);
+            background: var(--afz-black);
             color: white;
             width: 80px;
             height: 80px;
@@ -149,7 +161,7 @@
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary-black), var(--primary-gold));
+            background: linear-gradient(135deg, var(--afz-black), var(--afz-gold));
             display: flex;
             align-items: center;
             justify-content: center;
@@ -186,7 +198,7 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, var(--primary-black), var(--primary-gold));
+            background: linear-gradient(90deg, var(--afz-black), var(--afz-gold));
         }
         
         .value-card:hover {
@@ -197,7 +209,7 @@
         .value-icon {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, var(--primary-black), var(--primary-gold-light));
+            background: linear-gradient(135deg, var(--afz-black), var(--afz-gold-light));
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -207,7 +219,7 @@
         }
         
         .stats-section {
-            background: linear-gradient(135deg, var(--secondary-gray-dark), var(--primary-black));
+            background: linear-gradient(135deg, var(--gray-800), var(--afz-black));
             color: white;
             position: relative;
             overflow: hidden;
@@ -253,6 +265,34 @@
             font-weight: 500;
         }
         
+        .value-title {
+            font-size: 1.5rem;
+            color: var(--afz-black);
+            margin-bottom: var(--space-4);
+        }
+        
+        .value-description {
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+        
+        .team-name {
+            font-size: 1.25rem;
+            color: var(--afz-black);
+            margin-bottom: var(--space-2);
+        }
+        
+        .team-role {
+            color: var(--afz-gold);
+            font-weight: 600;
+            margin-bottom: var(--space-3);
+        }
+        
+        .team-bio {
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+        
         @media (max-width: 768px) {
             .timeline::before {
                 left: 30px;
@@ -289,13 +329,12 @@
     <!-- Skip to main content link for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-
     <!-- Header -->
     <header class="site-header" role="banner">
         <div class="header-container">
             
             <div class="logo-section">
-                <img src="../images/afz-logo-final.png" alt="Albinism Foundation of Zambia - AFZ Logo" class="logo">
+                <img src="favicon.jpg" alt="Albinism Foundation of Zambia - AFZ Logo" class="logo">
                 <div class="organization-info">
                     <h1 class="org-name" data-translate="org-name">Albinism Foundation of Zambia - AFZ</h1>
                     <p class="org-tagline" data-translate="org-tagline">Breaking the silence on Albinism</p>
@@ -311,7 +350,7 @@
             
             <nav class="main-nav" id="main-navigation" role="navigation" aria-label="Main navigation">
                 <ul class="nav-list">
-                    <li><a href="../index.html" class="nav-link" data-translate="nav-home">Home</a></li>
+                    <li><a href="index.html" class="nav-link" data-translate="nav-home">Home</a></li>
                     <li><a href="about.html" class="nav-link active" data-translate="nav-about">About Us</a></li>
                     <li><a href="programs.html" class="nav-link" data-translate="nav-programs">Programs</a></li>
                     <li><a href="resources.html" class="nav-link" data-translate="nav-resources">Resources</a></li>
@@ -543,7 +582,7 @@
                 <div class="footer-section">
                     <h4 class="footer-title" data-translate="footer-quick-links-title">Quick Links</h4>
                     <ul class="footer-links">
-                        <li><a href="../index.html" class="footer-link" data-translate="nav-home">Home</a></li>
+                        <li><a href="index.html" class="footer-link" data-translate="nav-home">Home</a></li>
                         <li><a href="about.html" class="footer-link" data-translate="nav-about">About Us</a></li>
                         <li><a href="programs.html" class="footer-link" data-translate="nav-programs">Programs</a></li>
                         <li><a href="advocacy.html" class="footer-link" data-translate="nav-advocacy">Advocacy</a></li>
@@ -585,9 +624,9 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="../js/main.js"></script>
-    <script src="../js/language.js"></script>
-    <script src="../js/navigation.js"></script>
-    <script src="../js/pwa.js"></script>
+    <script src="main.js"></script>
+    <script src="language.js"></script>
+    <script src="navigation.js"></script>
+    <script src="pwa.js"></script>
 </body>
 </html>
