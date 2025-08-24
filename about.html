@@ -7,6 +7,11 @@
     <meta name="keywords" content="AFZ, about us, albinism foundation Zambia, history, mission, vision, team">
     <title>About Us - AFZ | Albinism Foundation of Zambia</title>
     
+    <!-- Cache Control -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
     <!-- PWA Meta Tags -->
     <meta name="theme-color" content="#2b6cb0">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -21,7 +26,7 @@
     <meta property="og:image" href="favicon.jpg">
     
     <!-- AFZ UNIFIED DESIGN SYSTEM -->
-    <link rel="stylesheet" href="afz-unified-design.css">
+    <link rel="stylesheet" href="afz-unified-design.css?v=1.0.1">
     
     <!-- Favicons and Icons -->
     <link rel="icon" type="image/x-icon" href="favicon.jpg">
@@ -29,6 +34,20 @@
     
     <!-- Skip link for keyboard navigation -->
     <style>
+        /* Force refresh styles */
+        body::before {
+            content: "Page Updated: " attr(data-timestamp);
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: #ff0000;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            z-index: 9999;
+        }
+        
         .skip-link {
             position: absolute;
             top: -40px;
@@ -46,9 +65,11 @@
         
         /* About Page Specific Styles */
         .about-hero {
-            background: linear-gradient(135deg, var(--afz-black) 0%, var(--gray-800) 50%, var(--afz-gold) 100%);
+            background: linear-gradient(135deg, #000000 0%, #1F2937 50%, #DAA520 100%);
             position: relative;
             overflow: hidden;
+            color: white;
+            padding: 4rem 0;
         }
         
         .about-hero::before {
@@ -63,15 +84,15 @@
         }
         
         .mission-section {
-            padding: var(--space-16) 0;
-            background: var(--gray-50);
+            padding: 4rem 0;
+            background: #F9FAFB;
         }
         
         .section-title {
             font-size: 2.25rem;
-            color: var(--afz-black);
+            color: #000000;
             text-align: center;
-            margin-bottom: var(--space-8);
+            margin-bottom: 2rem;
         }
         
         .timeline {
@@ -86,7 +107,7 @@
             top: 0;
             bottom: 0;
             width: 4px;
-            background: linear-gradient(to bottom, var(--afz-black), var(--afz-gold));
+            background: linear-gradient(to bottom, #000000, #DAA520);
             transform: translateX(-50%);
         }
         
@@ -103,25 +124,25 @@
         
         .timeline-content {
             flex: 1;
-            background: var(--gray-50);
+            background: #F9FAFB;
             padding: 2rem;
-            border-radius: var(--radius-xl);
+            border-radius: 0.75rem;
             margin: 0 2rem;
-            box-shadow: var(--shadow-md);
-            border: 1px solid var(--gray-200);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            border: 1px solid #E5E7EB;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
         .timeline-content:hover {
             transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
         }
         
         .timeline-year {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            background: var(--afz-black);
+            background: #000000;
             color: white;
             width: 80px;
             height: 80px;
@@ -132,7 +153,7 @@
             font-weight: 700;
             font-size: 1.1rem;
             z-index: 10;
-            box-shadow: var(--shadow-md);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
         }
         
         .team-grid {
@@ -144,24 +165,24 @@
         
         .team-member {
             background: white;
-            border-radius: var(--radius-xl);
+            border-radius: 0.75rem;
             padding: 2rem;
             text-align: center;
-            box-shadow: var(--shadow-md);
-            border: 1px solid var(--gray-200);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            border: 1px solid #E5E7EB;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
         .team-member:hover {
             transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
         }
         
         .team-avatar {
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--afz-black), var(--afz-gold));
+            background: linear-gradient(135deg, #000000, #DAA520);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -182,10 +203,10 @@
         .value-card {
             background: white;
             padding: 2.5rem 2rem;
-            border-radius: var(--radius-xl);
+            border-radius: 0.75rem;
             text-align: center;
-            box-shadow: var(--shadow-md);
-            border: 1px solid var(--gray-200);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            border: 1px solid #E5E7EB;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -198,18 +219,18 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, var(--afz-black), var(--afz-gold));
+            background: linear-gradient(90deg, #000000, #DAA520);
         }
         
         .value-card:hover {
             transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
         }
         
         .value-icon {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, var(--afz-black), var(--afz-gold-light));
+            background: linear-gradient(135deg, #000000, #F4D03F);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -219,10 +240,11 @@
         }
         
         .stats-section {
-            background: linear-gradient(135deg, var(--gray-800), var(--afz-black));
+            background: linear-gradient(135deg, #1F2937, #000000);
             color: white;
             position: relative;
             overflow: hidden;
+            padding: 4rem 0;
         }
         
         .stats-section::before {
@@ -267,30 +289,42 @@
         
         .value-title {
             font-size: 1.5rem;
-            color: var(--afz-black);
-            margin-bottom: var(--space-4);
+            color: #000000;
+            margin-bottom: 1rem;
         }
         
         .value-description {
-            color: var(--gray-600);
+            color: #4B5563;
             line-height: 1.6;
         }
         
         .team-name {
             font-size: 1.25rem;
-            color: var(--afz-black);
-            margin-bottom: var(--space-2);
+            color: #000000;
+            margin-bottom: 0.5rem;
         }
         
         .team-role {
-            color: var(--afz-gold);
+            color: #DAA520;
             font-weight: 600;
-            margin-bottom: var(--space-3);
+            margin-bottom: 0.75rem;
         }
         
         .team-bio {
-            color: var(--gray-600);
+            color: #4B5563;
             line-height: 1.6;
+        }
+        
+        .page-title {
+            font-size: 2.25rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .page-description {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.125rem;
+            max-width: 800px;
         }
         
         @media (max-width: 768px) {
@@ -325,7 +359,7 @@
         }
     </style>
 </head>
-<body>
+<body data-timestamp="2024-01-27 15:30:00">
     <!-- Skip to main content link for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
